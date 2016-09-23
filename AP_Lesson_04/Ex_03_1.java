@@ -1,10 +1,9 @@
-
 import java.util.Scanner;
-public class Ex_03
+public class Ex_03_1
 {
 	public static void main(String[]args)
 	{
-		Ex_03 interest = new Ex_03();
+		Ex_03_1 interest = new Ex_03_1();
 		Scanner kb = new Scanner(System.in);
 		
 		System.out.println("What is your principal?");
@@ -21,12 +20,12 @@ public class Ex_03
 		
 		double payment = interest.calcInt(p, r, n, t);
 		
-		System.out.printf("Your total monthly payment is $%6.2f", payment);
+		System.out.printf("Your total payment is $%6.2f", payment);
 	}
 	public double calcInt(double one, double two, double three, double four)
 	{
 		
-		return (one*Math.pow((1 + (two/three)), (three*four)))/(12*four);
+		return (one*Math.pow((1 + (two/three)), (three*four)));
 
 
 	}
