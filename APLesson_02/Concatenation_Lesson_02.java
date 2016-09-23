@@ -6,7 +6,10 @@ public class Concatenation_Lesson_02
 		String second = "1233 N Avenue ";
 		String third = "San Diego ";
 		String fourth = "92130";
-		System.out.println(first + second + third + fourth);
+		System.out.println(first);
+		System.out.println(third);
+		System.out.println(second + fourth);
+		
 	
 	
 	}
