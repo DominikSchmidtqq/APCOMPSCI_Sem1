@@ -11,12 +11,12 @@ public class Ex_04
 		System.out.println("\nFormula: " + integer + "x");
 		System.out.println("____________________");
 		for (int i=1; i<(tablesize + 1); i++) {
-			int temp = integer * i;
-			format(i, temp);
+			int t = integer * i;
+			format(i, t);
 		}
 		System.out.println("____________________");
 	}
-	public static void format(int foo, int bar) {
-		System.out.printf("| %3d |\t%5d\t|\n", foo, bar);
+	public static void format(int f, int b) {
+		System.out.printf("| %3d |\t%5d\t|\n", f, b);
 	}
 }
