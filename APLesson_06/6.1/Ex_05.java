@@ -10,7 +10,7 @@ public class Ex_05
 		int num = kb.nextInt();
 		for (int i=1; i<=(number/num); i++)
 		{
-			System.out.printf((num*i)+"  ");
+			System.out.printf((num*i)+" ");
 			
 		}
 		System.out.println();
