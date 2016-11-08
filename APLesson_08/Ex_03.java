@@ -7,13 +7,17 @@ public class Ex_03{
 		System.out.println(luck(number));
 	}
 	public static int luck(int number){
-		if (number >0){
-			if (number%10==7){
+		if (number >0)
+		{
+			if (number%10==7)
+			{
 				return 1+luck(number/10);
 			}
+			else
+			{
+				return 0+luck(number/10);
+			}
 		}
-		else{
-			return 0;
-		}
+		return 0;
 	}
 }
