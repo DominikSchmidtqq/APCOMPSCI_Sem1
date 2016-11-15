@@ -5,13 +5,14 @@ public class Ex_04{
 		System.out.println("Plz enter a word");
 		String word = kb.nextLine();
 		int stop = word.length();
-		tree(word, stop);
+		tree(word, 0,stop);
 	}
-	public static String tree(String word, int stop, int start){
+	public static void tree(String word,  int start, int stop){
 		if (start <= stop){
-			System.out.printf("%15s\n"+ word.substring(0,start));
+			System.out.printf("%15s\n", word.substring(0,start));
 			start++;
-			tree(word,start,stop);
+			tree(word, start, stop);
+
 		}
 	}
 }
