@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Scanner;
+
 public class Ex02{
 	public static void main(String args []){
 		Scanner kb = new Scanner(System.in);
@@ -14,25 +15,28 @@ public class Ex02{
 			if (solve.get(i).equals("-")){
 				Integer num = Integer.parseInt(solve.get(i-1)) - Integer.parseInt(solve.get(i+1));
 				solve.set(i, " " + num + " ");
-				
+				solve.remove(i-1);
+				solve.remove(i);
 			}
 			else if (solve.get(i).equals("+")){
 				Integer num = Integer.parseInt(solve.get(i-1)) + Integer.parseInt(solve.get(i+1));
 				solve.set(i, " " + num + " ");
-				
+				solve.remove(i-1);
+				solve.remove(i);
 			}
 			else if (solve.get(i).equals("*")){
 				Integer num = Integer.parseInt(solve.get(i-1)) * Integer.parseInt(solve.get(i+1));
 				solve.set(i, " " + num + " ");
-			
+				solve.remove(i-1);
+				solve.remove(i);
 			}
 			else if (solve.get(i).equals("/")){
 				Integer num = Integer.parseInt(solve.get(i-1)) / Integer.parseInt(solve.get(i+1));
 				solve.set(i, " " + num + " ");
-				
+				solve.remove(i-1);
+				solve.remove(i);
 			}
-			solve.remove(i-1);
-			solve.remove(i);
+			
 		}
 		System.out.println("The answer is " + solve + " , Duh!");
 	}
