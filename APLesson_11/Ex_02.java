@@ -11,7 +11,7 @@ public class Ex_02 {
 		}
 		for(int i=0; i<words.length; i++) {
 			for(int d = 0; d<words[i].length; d++) {
-				System.out.println(words[i][d]);
+				System.out.print(words[i][d]+"\t");
 			}
 			System.out.println();
 		}
