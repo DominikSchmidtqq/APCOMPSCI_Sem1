@@ -14,7 +14,7 @@ public class Ex_03 {
 		}
 		for(int i=0; i<xAndO.length; i++) {
 			for(int d = 0; d<xAndO[i].length; d++) {
-				System.out.println(xAndO[i][d]);
+				System.out.print(xAndO[i][d] + "\t");
 			}
 			System.out.println();
 		}
