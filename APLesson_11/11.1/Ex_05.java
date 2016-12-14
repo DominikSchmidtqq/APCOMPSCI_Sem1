@@ -3,14 +3,12 @@ public class Ex_05 {
 		static int bulletCount = 96;
 	static int clipSize = 16;
 	static int shotCount = 0;
-	
-	public static void main(String[]args){
+	public static void main(String[]args) {
 		Scanner kb = new Scanner(System.in);
 		printClip();
-		
-		while(bulletCount + shotCount > 0){
+		while(bulletCount + shotCount > 0) {
 			System.out.print("Do Something (r to reload, s to shoot)");
-			switch(kb.next().toLowerCase()){
+			switch(kb.next().toLowerCase()) {
 				case "r":
 					reload();
 					break;
@@ -25,10 +23,9 @@ public class Ex_05 {
 			printClip();
 		}
 	}
-	
-	public static void printClip(){
+	public static void printClip() {
 		String out = "Bullets:\t" + bulletCount + "\nClip:\t";
-		for(int i = 0; i < clipSize; i++){
+		for(int i = 0; i < clipSize; i++) {
 			if(i < shotCount)
 				out += "* ";
 			else
@@ -37,22 +34,18 @@ public class Ex_05 {
 		
 		System.out.println(out);
 	}
-	
-	public static void reload(){
+	public static void reload() {
 		int shotCount_o = shotCount;
 		
 		shotCount = Math.min(shotCount + bulletCount, clipSize);
 		bulletCount -= shotCount - shotCount_o;
 	}
-	
-	public static void shoot(){
-		if(shotCount > 0){
+	public static void shoot() {
+		if(shotCount > 0) {
 			shotCount--;
 			System.out.println("DIIIIIIEEEEEEEEEE!");
 		}
 		else
 			System.out.println("Please reload");
-	
-		
 	}
 }
