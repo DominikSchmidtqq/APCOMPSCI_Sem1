@@ -3,7 +3,7 @@ public class Ex_06 {
 	static int healthload = 6;
 	static int healthcount = healthload;
 	static String[] health = new String[healthload];
-	public static void main(String[]args) {
+	public static void main(String args[]) {
 		Scanner keyboard = new Scanner(System.in);
 		String turn = "";
 		for (int i=0; i<health.length; i++) {
