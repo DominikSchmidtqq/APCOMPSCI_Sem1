@@ -3,7 +3,7 @@ public class Ex_05 {
 	static int bulletCount = 96;
 	static int clipSize = 16;
 	static int shotCount = 0;
-	public static void main(String[]args) {
+	public static void main(String args[]) {
 		Scanner kb = new Scanner(System.in);
 		printClip();
 		while(bulletCount + shotCount > 0) {
