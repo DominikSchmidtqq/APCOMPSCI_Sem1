@@ -1,7 +1,5 @@
-public class ASCART1
-{
-	public static void main(String[]args)
-	{
+public class ASCART1 {
+	public static void main(String[]args) {
 		System.out.println("            ");
 		System.out.println("    __  ___ ");
 		System.out.println("   / /  /  (_)");
