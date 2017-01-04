@@ -32,7 +32,6 @@ public class Ex_06 {
 		}
 		System.out.println(output);
 	}
-
 	public static void takeDamage(int dmg, int amt) {
 		if (dmg == 1) {
 			System.out.println("You take " + amt + " damage.");
