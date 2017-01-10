@@ -8,18 +8,18 @@ public class Distance {
 		xy = 0;
         dist = 0;
     }
-    public Distance(int xx, int xy, int xz, int xxy) {
-        x = xx;
-        y = xy;
-        z = xz;
-        xy = xxy;
+    public Distance(int m_x, int m_y, int m_z, int m_xy) {
+        x = m_x;
+        y = m_y;
+        z = m_z;
+        xy = m_xy;
         dist = 0;
     }
-    public void setVars(int xx, int xy, int xz, int xxy) {
-        x = xx;
-        y = xy;
-        z = xz;
-        xy = xxy;
+    public void setVars(int m_x, int m_y, int m_z, int m_xy) {
+        x = m_x;
+        y = m_y;
+        z = m_z;
+        xy = m_xy;
     }
     public double getDist() {
         dist = Math.sqrt((y-x)*(y-x)+(xy-z)*(xy-z));
