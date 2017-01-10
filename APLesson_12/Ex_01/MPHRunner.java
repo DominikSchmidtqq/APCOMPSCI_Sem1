@@ -11,6 +11,6 @@ public class MPHRunner {
         min = kb.nextInt();
         MilesPerHour miles = new MilesPerHour();
         miles.setVars(dist, hours, min);
-        System.out.println(dist + " miles in " + hours + " hours and " + min + " minutes = " + miles.getMPH() + " MPH.");
+        System.out.println(dist + " miles in " + hours + " hours and " + min + " minutes results in a speed of " + miles.getMPH() + " MPH.");
     }
 }
