@@ -22,7 +22,7 @@ public class InventoryItems {
 	public static void main(String args[]){
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Will you be entering category and price?(yes or no)");
-		String admin = kb.next();
+		String admin = kb.nextLine();
 		if (admin.equalsIgnoreCase("yes")) {
 			System.out.println("Enter the manufacturer:");
 			String m = kb.nextLine();
