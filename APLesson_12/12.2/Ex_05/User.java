@@ -24,7 +24,7 @@ public class User {
 		String f = kb.nextLine();
 		System.out.println("Emter the last name:");
 		String l = kb.nextLine();
-		System.out.println("Do you want to use a custom avatar(Yes or No");
+		System.out.println("Do you want to use a custom avatar(Yes or No)");
 		String av = kb.nextLine();
 		if(av.equalsIgnoreCase("yes")) {
 			System.out.println("Enter the avatar:");

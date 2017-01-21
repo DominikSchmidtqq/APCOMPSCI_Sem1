@@ -1,5 +1,5 @@
 import java.math.*;
-import java.util.*;
+import java.util.Scanner;
 public class InventoryItems {
 	private String manufacturer, name, category;
 	private long UPC;
@@ -17,13 +17,29 @@ public class InventoryItems {
 		price = p;
 	}
 	public String toString() {
-		return "Item \nManufacturer: "+manufacturer+"\nName: "+name+"\nCategory: "+category+"\nUPC: "+UPC+"\nPrice: "+price;
+		return "Item \nManufacturer: "+manufacturer+"\nName: "+name+"\nCategory: "+category+"\nUPC: "+UPC+"\nPrice: $"+price;
 	}
-	public static void main(String args[]){
+	public static void main(String args[]) {
 		Scanner kb = new Scanner(System.in);
-		System.out.println("Will you be entering category and price?(yes or no)");
+		System.out.println("Will you be entering category and price?(Yes or No) the password is \"Password\" ");
 		String admin = kb.nextLine();
 		if (admin.equalsIgnoreCase("yes")) {
+			yes();
+		}
+		else {
+			System.out.println("Enter the manufacturer:");
+			String m = kb.nextLine();
+			System.out.println("Enter the name:");
+			String n = kb.nextLine();
+			InventoryItems it = new InventoryItems(m,n);
+			System.out.println(it.toString());
+		}
+	}
+	public static void yes() {
+		Scanner kb = new Scanner(System.in);
+		System.out.println("Enter the password:");
+		String password = kb.nextLine();
+		if (password.equals("Password")) {
 			System.out.println("Enter the manufacturer:");
 			String m = kb.nextLine();
 			System.out.println("Enter the name:");
@@ -36,12 +52,8 @@ public class InventoryItems {
 			System.out.println(it.toString());
 		}
 		else {
-			System.out.println("Enter the manufacturer:");
-			String m = kb.nextLine();
-			System.out.println("Enter the name:");
-			String n = kb.nextLine();
-			InventoryItems it = new InventoryItems(m,n);
-			System.out.println(it.toString());
+			System.out.println("Wrong Password. Try again...");
+			yes();
 		}
 	}
 }
