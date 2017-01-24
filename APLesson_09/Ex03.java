@@ -6,7 +6,7 @@ public class Ex03{
 			numbers[i]=(int)(Math.random()*100)+1;
 		}
 		System.out.println("Numbers");
-		for( num:numbers){
+		for(int num:numbers){
 			System.out.println(num+ " ");
 		}
 		System.out.println();
