@@ -1,7 +1,6 @@
 
 public class Ex05 {
     static String numList = "";
-
     public static void main(String[]args) {
         int [] numbers = new int[10];
         fillArray(numbers);
