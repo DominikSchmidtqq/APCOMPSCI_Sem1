@@ -1,29 +1,35 @@
 
 public class Ex05 {
-	public static void main(String[]args) {
-		int[] Array = new int[10];
-		fillArray(Array);
-		System.out.print("For the following numbers: ");
-		printArray(Array);
-		System.out.println("\nThere are " + getOdds(Array) + " odd numbers.");
-	}
-	public static void fillArray(int[] numbers) {
-		for (int i=0;i<numbers.length;i++) {
-			numbers[i] = (int)(Math.random() * 100) + 1;
-		}
-	}
-	public static void printArray(int[] numbers) {
-		for (int foo : numbers) {
-			System.out.print(foo + " ");
-		}
-	}
-	public static int getOdds(int[] numbers) {
-		int odds = 0;
-		for (int number : numbers) {
-			if (number % 2 == 0) {
-				odds++;
-			}
-		}
-		return odds;
-	}
+    static String numList = "";
+
+    public static void main(String[]args) {
+        int [] numbers = new int[10];
+        fillArray(numbers);
+        System.out.println("For the following numbers " + printArray(numbers));
+        System.out.println(getOdds(numbers) + " are all the odd numbers.");
+    }
+
+    public static void fillArray(int[] num) {
+        for (int i = 0; i < num.length; i++) {
+            num[i] = (int)((Math.random()*101));
+        }
+    }
+    public static String printArray(int[] numb) {
+        for (int n: numb) {
+            numList += n + " " ;
+        }
+        return numList;
+    }
+    public static String getOdds(int[] numberz) {
+        String odds = "";
+        for (int nu: numberz) {
+            if ((nu % 2) == 0) {
+                odds += "";
+            }
+            else {
+                odds += nu + " ";
+            }
+        }
+        return odds;
+    }
 }
