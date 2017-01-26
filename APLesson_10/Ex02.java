@@ -1,18 +1,13 @@
-import java.util.ArrayList; 
-import java.util.Arrays;
-import java.util.Scanner;
-
+import java.util.*;
 public class Ex02 {
-	
-	public static void main(String [] args){
+	public static void main(String args[]){
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Enter Equation: ");
 		String eqString = kb.nextLine();
 		ArrayList<String> equation = new ArrayList<String>(Arrays.asList(eqString.split(" ")));
-		System.out.println(doEquation(equation));
+		System.out.println(xEquation(equation));
 	}
-	
-	public static ArrayList doEquation(ArrayList<String> equation){
+	public static ArrayList xEquation(ArrayList<String> equation){
 		while(equation.size()>1){
 		
 			int i=0;
@@ -29,7 +24,6 @@ public class Ex02 {
 				}
 				i++;
 			}
-			
 			i=0;
 			while(i<equation.size()){
 				if(equation.get(i).equals("+") || equation.get(i).equals("-")){
