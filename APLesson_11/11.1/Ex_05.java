@@ -1,4 +1,4 @@
-import java.util.Scanner;
+simport java.util.Scanner;
 public class Ex_05 {
 	static int bulletCount = 96;
 	static int clipSize = 16;
