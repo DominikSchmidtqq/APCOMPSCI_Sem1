@@ -37,7 +37,7 @@ public class ToyStore {
             if(t.getType().equals("Car")) {
                 cars++;
             }
-            else if(t.getType().equals("Action Figure")) {
+            else if(t.getType().equals("AF")) {
                 figures++;
             }
         }
@@ -51,7 +51,7 @@ public class ToyStore {
             return "Equal amounts of action figures and cars!";
         }
     }
-    /*public String toString() {
-        return
-    }*/
+	public String toString() {
+		return toyList+"";
+		}
 }

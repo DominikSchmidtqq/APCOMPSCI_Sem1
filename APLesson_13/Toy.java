@@ -2,10 +2,10 @@ public abstract class Toy {
     private String name;
     private int count;
     public Toy() {
-        count = 1;
+        count += 1;
     }
     public Toy(String nm) {
-        count = 1;
+        count += 1;
         setName(nm);
     }
     public String getName() {
