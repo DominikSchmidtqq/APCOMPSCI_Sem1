@@ -16,6 +16,5 @@ public class ToyRunner {
         System.out.println(store.getMostFrequentType());
 		System.out.println(store.getMostFrequentToy());
 		System.out.println(store.toString());
- 
     }
 }

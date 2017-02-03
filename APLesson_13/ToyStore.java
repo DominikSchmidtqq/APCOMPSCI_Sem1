@@ -10,8 +10,8 @@ public class ToyStore {
         for(int i=0; i<toys.size(); i+=2) {
             String name = toys.get(i);
             String type = toys.get(i+1);
-            Toy bar = this.getThatToy(name);
-            if(bar == null) {
+            Toy ty = this.getThatToy(name);
+            if(ty == null) {
                 if(type.equalsIgnoreCase("Car")) {
                     toyList.add(new Car(name));
                 }
@@ -20,7 +20,7 @@ public class ToyStore {
                 }
             }
             else {
-                bar.setCount(bar.getCount() + 1);
+                ty.setCount(ty.getCount() + 1);
             }
         }
     }
