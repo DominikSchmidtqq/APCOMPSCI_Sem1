@@ -1,24 +1,27 @@
 public abstract class Toy {
     private String name;
-    private int count;
+    private int count1;
     public Toy() {
-        count += 1;
+        count1 = 1;
     }
-    public Toy(String nm) {
-        count += 1;
-        setName(nm);
+    public Toy(String title) {
+        count1 = 1;
+        this.name = title;
     }
     public String getName() {
         return name;
     }
     public int getCount() {
-        return count;
+        return count1;
     }
-    public void setName(String nm) {
-        this.name = nm;
+    public void setName(String title) {
+        this.name = title;
+    }
+    public void setCount(int count1) {
+        this.count1 = count1;
     }
     public abstract String getType();
     public String toString() {
-        return getName() + getCount();
+        return name + ": " + count1;
     }
 }

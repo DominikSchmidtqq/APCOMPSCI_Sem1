@@ -1,8 +1,9 @@
 public class AFigure extends Toy {
     public AFigure() {
         super("Action Figure");
-        AFigure figure = new AFigure();
-        figure.getType();
+    }
+    public AFigure(String title) {
+        super(title);
     }
     public String getType() {
         return "Action Figure";
