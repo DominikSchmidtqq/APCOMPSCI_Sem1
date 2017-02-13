@@ -11,7 +11,7 @@ public class TicketDriver {
 			StudentAdvance student1 = new StudentAdvance(student);
 			System.out.println("Walk in:\n"+ walk.toString());
 			System.out.println();
-			System.out.println("\nAdvance (student):\n" + student1.toString());
+			System.out.println("\nAdvance:\n" + student1.toString());
 
 		}
 		else {
@@ -21,7 +21,7 @@ public class TicketDriver {
 			Advance Adult1 = new Advance(adult);
 			System.out.println("Walk in:\n"+ walk.toString());
 			System.out.println();
-			System.out.println("Advance (adult):\n"+ Adult1.toString());
+			System.out.println("Advance:\n"+ Adult1.toString());
 		}
 	}
 }
