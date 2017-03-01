@@ -1,7 +1,7 @@
-public class Toyota implements Location {
+public class Honda implements Location {
     private double x1, y1;
     private int id;
-    public Toyota(double[] pos) {
+    public Honda(double[] pos) {
         move(pos[0], pos[1]);
     }
     public void setID() {

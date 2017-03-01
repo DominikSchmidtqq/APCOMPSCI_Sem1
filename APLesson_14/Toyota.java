@@ -1,9 +1,9 @@
 import java.util.*;
-public class Honda implements Location {
+public class Toyota implements Location {
 	Scanner kb = new Scanner(System.in);
 	private double x1, y1;
 	private int id;
-	public Honda(String pos) {
+	public Toyota(String pos) {
 		ArrayList<String> position = new ArrayList<>(Arrays.asList(pos.split(", ")));
 		double xpos = Double.parseDouble(position.get(0));
 		double ypos = Double.parseDouble(position.get(1));
