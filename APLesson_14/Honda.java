@@ -1,14 +1,14 @@
 public class Honda implements Location {
     private double x1, y1;
-    private int id;
+    private int ID;
     public Honda(double[] pos) {
         move(pos[0], pos[1]);
     }
     public void setID() {
-        id = (int)(Math.random() * 999999) + 99999;
+        ID = (int)(Math.random() * 999999) + 99999;
     }
     public int getID() {
-        return id;
+        return ID;
     }
     public void move(double x, double y) {
         this.x1 += x;

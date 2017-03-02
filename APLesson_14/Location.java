@@ -1,4 +1,5 @@
 public interface Location {
-		double [] getLoc();
-		int getID();	
+	double [] getLoc();
+	void setID();
+	int getID();	
 }
