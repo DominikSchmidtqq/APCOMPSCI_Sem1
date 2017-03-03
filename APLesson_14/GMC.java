@@ -1,14 +1,14 @@
 public class GMC implements Location {
     private double x1, y1;
-    private int ID;
+    private int id;
     public GMC(double x, double y) {
         move(x, y);
     }
     public void setID() {
-        ID = (int)(Math.random() * 999999) + 99999;
+        id = (int)(Math.random() * 999999) + 99999;
     }
     public int getID() {
-        return ID;
+		return id;
     }
     public void move(double x, double y) {
         this.x1 += x;

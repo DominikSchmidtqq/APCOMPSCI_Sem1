@@ -2,7 +2,7 @@ import java.util.*;
 public class Toyota implements Location {
 	Scanner kb = new Scanner(System.in);
 	private double x1, y1;
-	private int ID;
+	private int id;
 	public Toyota(String pos) {
 		ArrayList<String> position = new ArrayList<>(Arrays.asList(pos.split(", ")));
 		double xpos = Double.parseDouble(position.get(0));
@@ -10,10 +10,10 @@ public class Toyota implements Location {
 		move(xpos, ypos);
 	}
 	public void setID() {
-		ID = (int)(Math.random()*999999) + 99999;
+		id = (int)(Math.random()*999999) + 99999;
 	}
 	public int getID() {
-		return ID;
+		return id;
 	}
 	public void move(double x, double y) {
 		this.x1 += x;
