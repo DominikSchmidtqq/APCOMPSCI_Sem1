@@ -1,6 +1,7 @@
 public class GMC extends Car {
     private double x1, y1;
     public GMC(double x, double y) {
+        super();
         move(x, y);
     }
     public void move(double x, double y) {

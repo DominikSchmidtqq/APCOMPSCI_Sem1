@@ -1,10 +1,11 @@
 import java.util.*;
 public abstract class Car implements Location {
-	private int id;
+	private int ID;
 	public Car() {
-		id = (int)(Math.random()* 999999) + 99999;
+		ID = (int)(Math.random() * 1000000) + 100000;
 	}
+	public abstract void move(double x, double y);
 	public int getID() {
-		return id;
+		return ID;
 	}
 }
