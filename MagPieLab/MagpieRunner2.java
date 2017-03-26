@@ -1,6 +1,6 @@
-import java.util.Scanner;
+import java.util.*;
 public class MagpieRunner2 {
-	public static void main(String[] args) {
+	public static void main(String[] args) {	
 		Magpie2 maggie = new Magpie2();
 		System.out.println (maggie.getGreeting());
 		Scanner in = new Scanner (System.in);
