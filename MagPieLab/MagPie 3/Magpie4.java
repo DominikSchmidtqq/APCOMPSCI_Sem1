@@ -41,8 +41,8 @@ public class Magpie4 {
 					response = transformIYoustatement(statement);
 				}
 			else {
-					response = getRandomResponse();
-				}
+				response = getRandomResponse();
+			}
 		}
 		return response;
 	}
@@ -76,7 +76,7 @@ public class Magpie4 {
   		int psnOfI = findKeyword(statement, "i");
   		int psnOfYou1 = findKeyword(statement, "you", psnOfI + 1);
   		String restOfStatement = statement.substring(psnOfI + 1, psnOfYou1 - 1);
-   		return "Wy do you " + restOfStatement + "me?";
+   		return "Wy do you " + restOfStatement + " me?";
 	}
 	private int findKeyword(String statement, String goal, int startPos) {
 		String phrase = statement.trim().toLowerCase();
