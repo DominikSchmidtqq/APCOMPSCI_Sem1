@@ -217,15 +217,18 @@ public void mirrorHorizontal()
     }   
   }
   public void createCollage() {
-    Picture flower1 = new Picture("flower1.jpg");
+    Picture motorcycle = new Picture("redmotorcycle.jpg");
     Picture flower2 = new Picture("flower2.jpg");
-    this.copy(flower1,0,0);
+	Picture snowman = new Picture("snowman.jpg");
+    this.copy(motorcycle,0,0);
     this.copy(flower2,100,0);
-    this.copy(flower1,200,0);
+    this.copy(snowman,200,0);
     Picture flowerNoBlue = new Picture(flower2);
     flowerNoBlue.zeroBlue();
+	Picture motorcycleNegate = new Picture(motorcycle);
+	motorcycleNegate.negate();
     this.copy(flowerNoBlue,300,0);
-    this.copy(flower1,400,0);
+    this.copy(motorcycle,400,0);
     this.copy(flower2,500,0);
     this.mirrorVertical();
     this.write("collage.jpg");
