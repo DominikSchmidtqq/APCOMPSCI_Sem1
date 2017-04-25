@@ -187,7 +187,7 @@ public void mirrorHorizontal()
 	Pixel leftPixel = null;
 	Pixel[][] pixels = this.getPixels2D();
 	for (int row = 237; row < 321; row++) {
-		for (int col = 236; col < mirrorPoint; col++); {
+		for (int col = 236; col < mirrorPoint; col++) {
 			rightPixel = pixels[row][col];
 			leftPixel = pixels[row][mirrorPoint - col + mirrorPoint/3];
 			leftPixel.setColor(rightPixel.getColor());
