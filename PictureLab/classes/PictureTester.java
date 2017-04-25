@@ -80,7 +80,6 @@ public class PictureTester
     motorcycle.explore();
   }
   
-  /** Method to test mirrorHorizontalBotToTop */
   public static void testMirrorHorizontalBotToTop()
   {
     Picture motorcycle = new Picture("redMotorcycle.jpg");
@@ -89,7 +88,6 @@ public class PictureTester
     motorcycle.explore();
   }
   
-  /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
     Picture temple = new Picture("temple.jpg");
@@ -97,13 +95,23 @@ public class PictureTester
     temple.mirrorTemple();
     temple.explore();
   }
-  
-  /** Method to test the collage method */
+  public static void testMirrorArms() {
+	Picture snowman = new Picture("snowman.jpg");
+	snowman.explore();
+	snowman.mirrorArms();
+	snowman.explore();
+  }
   public static void testCollage()
   {
     Picture canvas = new Picture("640x480.jpg");
     canvas.createCollage();
     canvas.explore();
+  }
+  public static void testMirrorGull() {
+	Picture seagull = new Picture("seagull.jpg");
+	seagull.explore();
+	seagull.mirrorGull();
+	seagull.explore();
   }
   
   /** Method to test edgeDetection */
@@ -127,11 +135,11 @@ public class PictureTester
     //testFixUnderwater();
     //testMirrorVertical();
     //testMirrorVerticalRightToLeft();
-    testMirrorHorizontal();
+    //testMirrorHorizontal();
     //testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
-    //testMirrorGull();
+    testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
