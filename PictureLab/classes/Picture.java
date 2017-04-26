@@ -220,9 +220,11 @@ public void mirrorHorizontal()
     Picture motorcycle = new Picture("redmotorcycle.jpg");
     Picture flower2 = new Picture("flower2.jpg");
 	Picture snowman = new Picture("snowman.jpg");
+	Picture snowmanGrey = new Picture(snowman);
+	snowmanGrey.grayscale();
     this.copy(motorcycle,0,0);
     this.copy(flower2,100,0);
-    this.copy(snowman,200,0);
+    this.copy(snowmanGrey,200,0);
     Picture flowerNoBlue = new Picture(flower2);
     flowerNoBlue.zeroBlue();
 	Picture motorcycleNegate = new Picture(motorcycle);
@@ -240,8 +242,7 @@ public void mirrorHorizontal()
     Color rightColor = null;
     for (int row = 0; row < pixels.length; row++) {
       for (int col = 0; 
-           col < pixels[0].length-1; col++)
-      {
+           col < pixels[0].length-1; col++) {
         leftPixel = pixels[row][col];
         rightPixel = pixels[row][col+1];
         rightColor = rightPixel.getColor();
@@ -253,6 +254,25 @@ public void mirrorHorizontal()
       }
     }
   }
+  /*public void edgeDetection2(int edgeDist) {
+	  Pixel topPixel = null;
+	  Pixel bottomtPixel = null;
+	  Pixel[][] pixels = this.getPixels2D();
+	  Color bottomColor = null;
+	  for (int row = 0; row < pixels.length; row++) {
+		  for (int col  = 0; col < pixels[0].length-1; col++) {
+			  topPixel = pixels[row][col];
+			  bottomPixel = pixels[row+1][col];
+			  bottomColor = bottomPixel.getColor();
+			  if (topPixel.colorDistance(bottomColor) > edgeDist) {
+				  topPixel.setColor(Color.BLACK);
+			  }
+			  else 
+				  topPixel.setColor(Color.WHITE);
+		  }
+	  }
+  }*/
+  
   public static void main(String[] args) {
     Picture beach = new Picture("beach.jpg");
     beach.explore();
