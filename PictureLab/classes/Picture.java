@@ -254,25 +254,26 @@ public void mirrorHorizontal()
       }
     }
   }
-  /*public void edgeDetection2(int edgeDist) {
-	  Pixel topPixel = null;
-	  Pixel bottomtPixel = null;
-	  Pixel[][] pixels = this.getPixels2D();
-	  Color bottomColor = null;
-	  for (int row = 0; row < pixels.length; row++) {
-		  for (int col  = 0; col < pixels[0].length-1; col++) {
-			  topPixel = pixels[row][col];
-			  bottomPixel = pixels[row+1][col];
-			  bottomColor = bottomPixel.getColor();
-			  if (topPixel.colorDistance(bottomColor) > edgeDist) {
-				  topPixel.setColor(Color.BLACK);
-			  }
-			  else 
-				  topPixel.setColor(Color.WHITE);
-		  }
-	  }
-  }*/
-  
+  public void edgeDetection2(int edgeDist) {
+    Pixel currentPixel = null;
+    Pixel diagonalPixel = null;
+    Pixel[][] pixels = this.getPixels2D();
+    Color diagonalColor = null;
+    for (int row = 0; row < pixels.length-1; row++)
+    {
+      for (int col = 0; 
+           col < pixels[0].length-1; col++)
+      {
+        currentPixel = pixels[row][col];
+        diagonalPixel = pixels[row+1][col+1];
+        diagonalColor = diagonalPixel.getColor();
+        if (currentPixel.colorDistance(diagonalColor) > edgeDist) 
+			currentPixel.setColor(Color.BLACK);
+        else
+			currentPixel.setColor(Color.WHITE);
+      }
+    }	
+  }
   public static void main(String[] args) {
     Picture beach = new Picture("beach.jpg");
     beach.explore();
