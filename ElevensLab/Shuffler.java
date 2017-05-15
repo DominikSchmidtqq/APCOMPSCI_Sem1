@@ -1,6 +1,6 @@
 public class Shuffler {
-    private static final int SHUFFLE_COUNT = 5;
-    private static final int VALUE_COUNT = 10;
+    private static final int SHUFFLE_COUNT = 6;
+    private static final int VALUE_COUNT = 6;
     public static void main(String[] args) {
         System.out.println(SHUFFLE_COUNT + " consecutive perfect shuffles:");
         int[] values1 = new int[VALUE_COUNT];
@@ -31,25 +31,25 @@ public class Shuffler {
         }
         System.out.println();
     }
-    public static void perfectShuffle(int[] values) {
-        int[] half1 = new int[ VALUE_COUNT / 2 ];
-        int[] half2 = new int[ VALUE_COUNT - VALUE_COUNT / 2 ];
-        for( int i = 0; i < VALUE_COUNT / 2; i++ ) {
+    public static void perfectShuffle(int [] values) {
+        int[] half1 = new int[VALUE_COUNT / 2];
+        int[] half2 = new int[VALUE_COUNT - VALUE_COUNT / 2];
+        for(int i = 0; i < VALUE_COUNT / 2; i++) {
             half1[i] = values[i];
         }
-        for( int i = 0; i < VALUE_COUNT - VALUE_COUNT / 2; i++ ) {
+        for(int i = 0; i < VALUE_COUNT - VALUE_COUNT / 2; i++) {
             half2[i] = values[ i + VALUE_COUNT / 2 ];
         }
-        for( int i = 0; i < VALUE_COUNT / 2; i++ ) {
+        for(int i = 0; i < VALUE_COUNT / 2; i++) {
             values[ 2 * i ] = half2[i];
             values[ 2 * i + 1 ] = half1[i];
         }
-        if( VALUE_COUNT % 2 != 0 ) {
+        if(VALUE_COUNT % 2 != 0) {
             values[ VALUE_COUNT - 1 ] = half2[ VALUE_COUNT - VALUE_COUNT / 2 ];
         }
     }
     public static void selectionShuffle(int[] values) {
-        for( int k = VALUE_COUNT - 1; k >= 0; k-- ) {
+        for(int k = VALUE_COUNT - 1; k >= 0; k--) {
             int r = (int)(Math.random() * k);
             int tmp = values[r];
             values[r] = values[k];
