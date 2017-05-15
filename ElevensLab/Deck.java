@@ -28,36 +28,33 @@ public class Deck {
         }
 	}
 	public Card deal() {
-		if (isEmpty()) {
-			return null;
-		}
 		size--;
 		Card c = cards.get(size);
 		return c;
 	}
 	@Override
 	public String toString() {
-		String rtn = "size = " + size + "\nUndealt cards: \n";
+		String rtrn = "size = " + size + "\nUndealt cards: \n";
 		for (int k = size - 1; k >= 0; k--) {
-			rtn = rtn + cards.get(k);
+			rtrn = rtrn + cards.get(k);
 			if (k != 0) {
-				rtn = rtn + ", ";
+				rtrn = rtrn + ", ";
 			}
 			if ((size - k) % 2 == 0) {
-				rtn = rtn + "\n";
+				rtrn = rtrn + "\n";
 			}
 		}
-		rtn = rtn + "\nDealt cards: \n";
+		rtrn = rtrn + "\nDealt cards: \n";
 		for (int k = cards.size() - 1; k >= size; k--) {
-			rtn = rtn + cards.get(k);
+			rtrn = rtrn + cards.get(k);
 			if (k != size) {
-				rtn = rtn + ", ";
+				rtrn = rtrn + ", ";
 			}
 			if ((k - cards.size()) % 2 == 0) {
-				rtn = rtn + "\n";
+				rtrn = rtrn + "\n";
 			}
 		}
-		rtn = rtn + "\n";
-		return rtn;
+		rtrn = rtrn + "\n";
+		return rtrn;
 	}
 }

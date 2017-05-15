@@ -14,6 +14,6 @@ public class DeckTester {
 	    String[] suit3 = {"Diamonds", "Spades", "Clubs"};
 	    int[] value3 = {1, 3, 12};
 	    Deck d3 = new Deck(rank3, suit3, value3);
-	    System.out.println("Deck3 dealt card is: " + d3.deal());
+	    System.out.println("Deck3 dealt card " + d3.deal());
 	}
 }
