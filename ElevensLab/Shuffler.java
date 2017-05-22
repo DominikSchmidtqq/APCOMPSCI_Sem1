@@ -27,24 +27,22 @@ public class Shuffler {
 	public static void perfectShuffle(int[] values) {
 		int[] shuffled = new int[values.length];
 		int half = (values.length + 1) / 2;
-		int unshuffledPos = 0;
 		int k = 0;
-		for (; k < half; k++) {
-			shuffled[unshuffledPos] = values[k];
-			unshuffledPos += 2;
+		for (int j = 0; j < half; j++) {
+			shuffled[k] = values[j];
+			k += 2;
 		}
-		unshuffledPos = 1;
-		for (; k < values.length; k++) {
-			shuffled[unshuffledPos] = values[k];
-			unshuffledPos += 2;
+		k = 1;
+		for (int j = half; j < values.length; j++) {
+			shuffled[k] = values[j];
+			k += 2;
 		}
-		for (k = 0; k < values.length; k++) {
-			values[k] = shuffled[k];
+		for (int i = 0; i < values.length; i++) {
+			values[i] = shuffled[i];
 		}
 	}
 	public static void selectionShuffle(int[] values) {
-		for(int h = 0; h < values.length; h++)
-		{
+		for(int h = 0; h < values.length; h++) {
 			int j = (int)(Math.random() * (h+1));
 			int shuffled = values[j];
 			values[j] = values[h];
