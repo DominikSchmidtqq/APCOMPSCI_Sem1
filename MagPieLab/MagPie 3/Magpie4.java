@@ -4,6 +4,7 @@ public class Magpie4 {
 	}
 	public String getResponse(String statement) {
 		String response = "";
+		int psn = 0;
 		if(statement.length() == 0) {
 			response = "Answer plz";
 		}
@@ -28,22 +29,23 @@ public class Magpie4 {
 		else if (findKeyword(statement, "I want to", 0) >= 0) {
   			response = transformIWantToStatement(statement);
 		}
-		else {
-  			int psn = findKeyword(statement, "you", 0);
-			if (psn >= 0 && findKeyword(statement, "me", psn) >= 0) {
-     		response = transformYouMeStatement(statement);
-  			}
-  			else {
-     			response = getRandomResponse();
-  			}
+		else if (findKeyword(statement, "I", 0) >=0) {
 			psn = findKeyword(statement, "I", 0);
 			if (psn >= 0 && findKeyword(statement, "you", psn) >= 0) {
-					response = transformIYoustatement(statement);
-				}
-			else {
-				response = getRandomResponse();
+				response = transformIYoustatement(statement);
 			}
 		}
+		else if (findKeyword(statement, "you") >= 0) {
+			psn = findKeyword(statement, "you", 0);
+			if (psn >= 0 && findKeyword(statement, "me", psn) >= 0) {
+				response = transformYouMeStatement(statement);
+  			}
+		}
+		
+		else {
+				response = getRandomResponse();
+			}
+		
 		return response;
 	}
 	private String transformIWantToStatement(String statement) {
@@ -76,7 +78,7 @@ public class Magpie4 {
   		int psnOfI = findKeyword(statement, "i");
   		int psnOfYou1 = findKeyword(statement, "you", psnOfI + 1);
   		String restOfStatement = statement.substring(psnOfI + 1, psnOfYou1 - 1);
-   		return "Wy do you " + restOfStatement + " me?";
+   		return "Why do you " + restOfStatement + " me?";
 	}
 	private int findKeyword(String statement, String goal, int startPos) {
 		String phrase = statement.trim().toLowerCase();
